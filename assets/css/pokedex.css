@@ -161,5 +161,47 @@
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+    }}
+
+/* Overlay que cobre a tela */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Card de detalhe */
+.detail-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 320px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Botão fechar */
+.detail-card #closeDetail {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff3b3b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
